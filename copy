@@ -1,0 +1,3 @@
+#!/bin/bash
+pasta="$(</dev/stdin)"
+curl -Gs --data-urlencode "c=$pasta" http://localhost:5050/ > /dev/null
