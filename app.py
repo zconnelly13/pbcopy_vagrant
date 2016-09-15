@@ -6,8 +6,8 @@ from os import system
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def paste():
     pasta = request.args['c']
-    system("echo {pasta} | pbcopy".format(pasta=pasta))
+    system('echo "{pasta}" | pbcopy'.format(pasta=pasta))
     return pasta
